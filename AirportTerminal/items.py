@@ -5,7 +5,18 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-from scrapy.item import Item, Field
+import scrapy
 
-class AirportTermianlItem(Item):
-    title = Field()
+
+class V2EXItem(scrapy.Item):
+    title = scrapy.Field()
+    author = scrapy.Field()
+    content = scrapy.Field()
+    link = scrapy.Field()
+
+
+class BangumiTvItem(scrapy.Item):
+    original_title = scrapy.Field()
+    link = scrapy.Field()
+    score = scrapy.Field()
+    bangumi_rank = scrapy.Field()
